@@ -230,6 +230,7 @@
     git:
       repo: https://github.com/DrSchottky/pwnagotchi.git
       dest: /usr/local/src/pwnagotchi
+      version: gh-actions
     register: pwnagotchigit
 
   - name: create /usr/local/share/pwnagotchi/ folder
