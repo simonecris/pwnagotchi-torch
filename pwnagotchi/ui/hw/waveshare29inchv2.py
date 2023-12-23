@@ -35,9 +35,9 @@ class Waveshare29inchV2(DisplayImpl):
         logging.info("initializing waveshare v2 2.9 inch display")
         from pwnagotchi.ui.hw.libs.waveshare.v29inchV2.epd2in9V2 import EPD
         self._display = EPD()
-        self._display.init(self._display.WF_FULL)
+        self._display.init()
         self._display.Clear(0xFF)
-        self._display.init(self._display.WF_PARTIAL_2IN9)
+        self._display.init()
 
     def render(self, canvas):
         buf = self._display.getbuffer(canvas)
