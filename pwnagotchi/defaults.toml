@@ -200,7 +200,8 @@ ui.web.on_frame = ""
 
 ui.display.enabled = false
 ui.display.rotation = 180
-ui.display.type = "waveshare_4"
+ui.display.type = "waveshare_2"
+ui.display.color = "black"
 
 bettercap.scheme = "http"
 bettercap.hostname = "localhost"

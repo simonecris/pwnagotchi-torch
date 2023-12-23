@@ -11,11 +11,6 @@ Default SSH credentials are pi/raspberry and for Orange Pi pi/orange
 Armhf is for 0w, arm64 is for 02w, 3 and 4.
 
 # Donations: 
-I would like to thank 
-- [findingmoist](https://github.com/findingmoist) 
-- [kr4k0n](https://github.com/kr4k0n)
-
-for donating!
 
 [Pwnagotchi-Torch](https://www.patreon.com/pwnagotchi_torch)
 
