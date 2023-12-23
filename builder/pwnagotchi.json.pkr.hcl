@@ -1,4 +1,4 @@
-# This is not working quite yet
+# This is not working quite ye
 # https://github.com/mkaczanowski/packer-builder-arm/pull/172
 packer {
   required_plugins {
