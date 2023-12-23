@@ -6,7 +6,7 @@
   vars:
     boards:
       - {
-        kernel: "6.1.21+",
+        kernel: "6.1.0-rpi7-rpi-v6",
         name: "PiZeroW",
         firmware: "brcmfmac43430-sdio.bin",
         patch: "bcm43430a1/7_45_41_46",
@@ -14,7 +14,7 @@
         arch_flags: "-arch armv6l"
         }
       - {
-        kernel: "6.1.21-v7+",
+        kernel: "6.1.0-rpi7-rpi-v7",
         name: "PiZero2W",
         firmware: "brcmfmac43436-sdio.bin",
         patch: "bcm43436b0/9_88_4_65",
@@ -22,7 +22,7 @@
         arch_flags: "-arch armv7l"
         }
       - {
-        kernel: "6.1.21-v7l+",
+        kernel: "6.1.0-rpi7-rpi-v7l",
         name: "Pi4b_32",
         firmware: "brcmfmac43455-sdio.bin",
         patch: "bcm43455c0/7_45_206",
@@ -31,9 +31,9 @@
         }
     kernel:
       min: "6.1"
-      full: "6.1.21+"
-      full_2w: "6.1.21-v7+"
-      full_4b: "6.1.21-v7l+"
+      full: "6.1.0-rpi7-rpi-v6"
+      full_2w: "6.1.0-rpi7-rpi-v7"
+      full_4b: "6.1.0-rpi7-rpi-v7"
       arch: "v6l"
     pwnagotchi:
       hostname: "{{ lookup('env', 'PWN_HOSTNAME') | default('pwnagotchi', true) }}"
@@ -80,17 +80,17 @@
         source: "https://github.com/jayofelony/caplets.git"
       bettercap:
         source: "https://github.com/jayofelony/bettercap.git"
-        url: "https://github.com/jayofelony/bettercap/releases/download/2.32.1/bettercap-2.32.1-armhf.zip"
+        url: "https://github.com/jayofelony/bettercap/releases/download/2.32.2/bettercap-2.32.2-armhf.zip"
         ui: "https://github.com/bettercap/ui/releases/download/v1.3.0/ui.zip"
       opwngrid:
         source: "https://github.com/jayofelony/pwngrid.git"
         url: "https://github.com/jayofelony/pwngrid/releases/download/v1.10.5/pwngrid-1.10.5-armhf.zip"
       torch:
-        wheel: "torch-2.1.0a0+gitunknown-cp39-cp39-linux_armv6l.whl"
-        url: "https://github.com/Sniffleupagus/Torch4Pizero/releases/download/v1.0.0/torch-2.1.0a0+gitunknown-cp39-cp39-linux_armv6l.whl"
+        wheel: "torch-2.1.0a0+gita8e7c98-cp311-cp311-linux_armv6l.whl"
+        url: "https://github.com/Sniffleupagus/Torch4Pizero/releases/download/py0torch-bookworm/torch-2.1.0a0+gita8e7c98-cp311-cp311-linux_armv6l.whl"
       torchvision:
-        wheel: "torchvision-0.16.0a0-cp39-cp39-linux_armv6l.whl"
-        url: "https://github.com/Sniffleupagus/Torch4Pizero/releases/download/v1.0.0/torchvision-0.16.0a0-cp39-cp39-linux_armv6l.whl"
+        wheel: "torchvision-0.16.0+fbb4cc5-cp311-cp311-linux_armv6l.whl"
+        url: "https://github.com/Sniffleupagus/Torch4Pizero/releases/download/py0torch-bookworm/torchvision-0.16.0+fbb4cc5-cp311-cp311-linux_armv6l.whl"
       apt:
         downgrade:
           - libpcap-dev_1.9.1-4_armhf.deb
@@ -98,11 +98,6 @@
           - libpcap0.8-dev_1.9.1-4_armhf.deb
           - libpcap0.8_1.9.1-4_armhf.deb
         hold:
-          - firmware-atheros
-          - firmware-brcm80211
-          - firmware-libertas
-          - firmware-misc-nonfree
-          - firmware-realtek
           - libpcap-dev
           - libpcap0.8
           - libpcap0.8-dev
@@ -121,8 +116,6 @@
           - curl
           - dkms
           - dphys-swapfile
-          - espeak-ng
-          - evtest
           - fbi
           - flex
           - fonts-dejavu
@@ -134,14 +127,14 @@
           - gcc-arm-none-eabi
           - git
           - libatlas-base-dev
-          - libavcodec58
-          - libavformat58
+          - libavcodec59
+          - libavformat59
           - libblas-dev
           - libbluetooth-dev
           - libbz2-dev
           - libc-ares-dev
           - libc6-dev
-          - libcpuinfo-dev
+          - libcap-dev
           - libdbus-1-dev
           - libdbus-glib-1-dev
           - libeigen3-dev
@@ -162,27 +155,39 @@
           - libopenmpi-dev
           - libopenmpi3
           - libpcap-dev
-          - libprotobuf-dev
           - libraspberrypi-bin
           - libraspberrypi-dev
           - libraspberrypi-doc
           - libraspberrypi0
-          - libsleef-dev
           - libsqlite3-dev
           - libssl-dev
           - libswscale5
-          - libtiff5
+          - libtiff6
           - libtool
-          - libts-bin
           - libusb-1.0-0-dev
           - lsof
           - make
+          - python3-yaml
+          - python3-dbus
           - python3-flask
           - python3-flask-cors
           - python3-flaskext.wtf
+          - python3-gast
           - python3-pil
+          - python3-pycryptodome
+          - python3-requests
+          - python3-scapy
+          - python3-smbus2
+          - python3-spidev
+          - python3-tweepy
+          - python3-werkzeug
+          - firmware-atheros
+          - firmware-brcm80211
+          - firmware-libertas
+          - firmware-misc-nonfree
+          - firmware-realtek
           - python3-pip
-          - python3-protobuf
+          - python3-setuptools
           - python3-smbus
           - qpdf
           - raspberrypi-kernel-headers
@@ -251,7 +256,7 @@
         state: present
 
     - name: update pip3, setuptools, wheel
-      shell: "python3 -m pip install --upgrade pip setuptools wheel"
+      shell: "python3 -m pip install --upgrade pip setuptools wheel --break-system-packages"
       args:
         executable: /bin/bash
         chdir: /usr/local/src
@@ -292,7 +297,10 @@
     ###############################################################
     # Install nexmon to fix wireless scanning (takes 2.5G of space)
     ###############################################################
-
+    - name: clone nexmon repository
+      git:
+        repo: https://github.com/DrSchottky/nexmon.git
+        dest: /usr/local/src/nexmon
     # Install nexmon for all boards
     - name: build and install nexmon as needed
       include_tasks: nexmon.yml
@@ -328,16 +336,6 @@
       git:
         repo: https://github.com/jayofelony/pwnagotchi-torch.git
         dest: /usr/local/src/pwnagotchi
-      register: pwnagotchigit
-
-    # is this even necessary? Can't we just link from /home/pi/pwnagotchi to /usr/local/{bin,lib,etc}
-    # then just git update in the home dir and encourage hacking?
-    # make owned by pi.pi, and custom plugins.
-    - name: build pwnagotchi wheel
-      command: "python3 setup.py sdist bdist_wheel"
-      args:
-        chdir: /usr/local/src/pwnagotchi
-      when: (pwnagotchigit.changed) or (pip_packages['pwnagotchi'] is undefined) or (pip_packages['pwnagotchi'] != pwnagotchi_version)
 
     - name: download torch whl
       get_url:
@@ -352,14 +350,14 @@
     - name: install 32-bit pwnagotchi wheel and dependencies with 32-bit torch wheels
       pip:
         name:
-          - "{{ lookup('fileglob', '/usr/local/src/pwnagotchi/dist/pwnagotchi*.whl') }}"
           - "{{ packages.torch.url }}"
           - "{{ packages.torchvision.url }}"
-        extra_args: "--no-cache-dir"
-      environment:
-        QEMU_CPU: arm1176
-        QEMU_UNAME: "{{ kernel.full }}"
-      when: (pwnagotchigit.changed) or (pip_packages['pwnagotchi'] is undefined) or (pip_packages['pwnagotchi'] != pwnagotchi_version)
+        extra_args: "--no-cache-dir --break-system-packages"
+
+    - name: build pwnagotchi wheel
+      command: "pip install . --no-cache-dir --break-system-packages"
+      args:
+        chdir: /usr/local/src/pwnagotchi
 
     - name: create /usr/local/share/pwnagotchi/ folder
       file:
@@ -384,7 +382,7 @@
 
     - name: Install go-1.21
       unarchive:
-        src: https://go.dev/dl/go1.21.4.linux-armv6l.tar.gz
+        src: https://go.dev/dl/go1.21.5.linux-armv6l.tar.gz
         dest: /usr/local
         remote_src: yes
       register: golang
