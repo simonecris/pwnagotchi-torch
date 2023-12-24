@@ -4,21 +4,21 @@ from pwnagotchi.ui.hw.oledhat import OledHat
 from pwnagotchi.ui.hw.lcdhat import LcdHat
 from pwnagotchi.ui.hw.dfrobot1 import DFRobotV1
 from pwnagotchi.ui.hw.dfrobot2 import DFRobotV2
-from pwnagotchi.ui.hw.waveshare1 import WaveshareV1
-from pwnagotchi.ui.hw.waveshare2 import WaveshareV2
-from pwnagotchi.ui.hw.waveshare3 import WaveshareV3
-from pwnagotchi.ui.hw.waveshare4 import WaveshareV4
-from pwnagotchi.ui.hw.waveshare27inch import Waveshare27inch
-from pwnagotchi.ui.hw.waveshare27inchv2 import Waveshare27inchV2
-from pwnagotchi.ui.hw.waveshare29inch import Waveshare29inch
-from pwnagotchi.ui.hw.waveshare29inchv2 import Waveshare29inchV2
-from pwnagotchi.ui.hw.waveshare144lcd import Waveshare144lcd
-from pwnagotchi.ui.hw.waveshare154inchb import Waveshare154inchb
-from pwnagotchi.ui.hw.waveshare213bc import Waveshare213bc
-from pwnagotchi.ui.hw.waveshare213d import Waveshare213d
+from pwnagotchi.ui.hw.waveshare213inV1 import WaveshareV1
+from pwnagotchi.ui.hw.waveshare213inV2 import WaveshareV2
+from pwnagotchi.ui.hw.waveshare213inV3 import WaveshareV3
+from pwnagotchi.ui.hw.waveshare213inV4 import WaveshareV4
+from pwnagotchi.ui.hw.waveshare27inV1 import Waveshare27inch
+from pwnagotchi.ui.hw.waveshare27inV2 import Waveshare27inchV2
+from pwnagotchi.ui.hw.waveshare29inV1 import Waveshare29inch
+from pwnagotchi.ui.hw.waveshare29inV2 import Waveshare29inchV2
+from pwnagotchi.ui.hw.waveshare144inlcd import Waveshare144lcd
+from pwnagotchi.ui.hw.waveshare154inb import Waveshare154inchb
+from pwnagotchi.ui.hw.waveshare213inbc import Waveshare213bc
+from pwnagotchi.ui.hw.waveshare213ind import Waveshare213d
 from pwnagotchi.ui.hw.waveshare213inb_v4 import Waveshare213bV4
-from pwnagotchi.ui.hw.waveshare35lcd import Waveshare35lcd
-from pwnagotchi.ui.hw.spotpear24inch import Spotpear24inch
+from pwnagotchi.ui.hw.waveshare35inlcd import Waveshare35lcd
+from pwnagotchi.ui.hw.spotpear24in import Spotpear24inch
 from pwnagotchi.ui.hw.displayhatmini import DisplayHatMini
 
 
