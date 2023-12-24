@@ -60,7 +60,7 @@ class UPSLite(plugins.Plugin):
     __author__ = 'evilsocket@gmail.com'
     __version__ = '1.0.0'
     __license__ = 'GPL3'
-    __description__ = 'A plugin that will add a voltage indicator for the UPS Lite v213inV1.1'
+    __description__ = 'A plugin that will add a voltage indicator for the UPS Lite V1.1'
 
     def __init__(self):
         self.ups = None

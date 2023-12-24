@@ -6,7 +6,7 @@ from pwnagotchi.ui.hw.base import DisplayImpl
 
 class Waveshare29inchV2(DisplayImpl):
     def __init__(self, config):
-        super(Waveshare29inchV2, self).__init__(config, 'waveshare_29inchV2')
+        super(Waveshare29inchV2, self).__init__(config, 'waveshare2in9_v2')
         self._display = None
 
     def layout(self):
@@ -32,8 +32,8 @@ class Waveshare29inchV2(DisplayImpl):
         return self._layout
 
     def initialize(self):
-        logging.info("initializing waveshare v213inV2 2.9 inch display")
-        from pwnagotchi.ui.hw.libs.waveshare.v29inV2.epd2in9V2 import EPD
+        logging.info("initializing waveshare v2in13_V2 2.9 inch display")
+        from pwnagotchi.ui.hw.libs.waveshare.v2in9_v2.epd2in9V2 import EPD
         self._display = EPD()
         self._display.init()
         self._display.Clear(0xFF)
