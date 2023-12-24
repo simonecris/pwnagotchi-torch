@@ -55,7 +55,7 @@ class Waveshare213bV4(DisplayImpl):
         return self._layout
 
     def initialize(self):
-        logging.info("initializing waveshare 2.13inb v4 display")
+        logging.info("initializing waveshare 2.13inb v213inV4 display")
         from pwnagotchi.ui.hw.libs.waveshare.v213inb_v4.epd2in13b_V4 import EPD
         self._display = EPD()
         self._display.init()
