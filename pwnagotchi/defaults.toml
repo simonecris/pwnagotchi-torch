@@ -202,7 +202,7 @@ ui.web.on_frame = ""
 ui.display.enabled = false
 ui.display.rotation = 180
 ui.display.type = "waveshare_2"
-# ui.display.color = "black" # In the case of waveshare_1 you can choose between black, fastAndFurious and nothing (3 color mode)
+ui.display.color = "black" # In the case of waveshare_1 or 2 you can choose between black, fastAndFurious and nothing (3 color mode)
 
 bettercap.scheme = "http"
 bettercap.hostname = "localhost"
