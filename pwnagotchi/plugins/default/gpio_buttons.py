@@ -14,6 +14,7 @@ class GPIOButtons(plugins.Plugin):
         self.running = False
         self.ports = {}
         self.commands = None
+        self.options = dict()
 
     def runCommand(self, channel):
         command = self.ports[channel]

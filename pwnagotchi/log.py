@@ -208,6 +208,8 @@ class LastSession(object):
             logging.debug("parsing last session logs (%d lines) ..." % len(lines))
 
             self._parse_stats()
+
+            self.save_session_id()
         self.parsed = True
 
     def is_new(self):
@@ -237,9 +239,9 @@ def setup_logging(args, config):
     root.addHandler(console_handler)
 
     if not args.debug:
-        # disable scapy and tensorflow logging
+        # disable scapy and torch logging
         logging.getLogger("scapy").disabled = True
-        logging.getLogger('tensorflow').disabled = True
+        logging.getLogger('torch').disabled = True
         # https://stackoverflow.com/questions/15777951/how-to-suppress-pandas-future-warning
         warnings.simplefilter(action='ignore', category=FutureWarning)
         warnings.simplefilter(action='ignore', category=DeprecationWarning)

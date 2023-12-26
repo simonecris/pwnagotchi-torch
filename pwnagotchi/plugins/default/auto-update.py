@@ -38,11 +38,11 @@ def check(version, repo, native=True):
             info['url'] = "https://github.com/%s/archive/%s.zip" % (repo, latest['tag_name'])
         else:
             if is_arm:
-                # check if this release is compatible with arm6
+                # check if this release is compatible with arm
                 for asset in latest['assets']:
                     download_url = asset['browser_download_url']
                     if (download_url.endswith('.zip') and
-                            (info['arch'] in download_url or (is_arm and 'armhf' in download_url))):
+                            (info['arch'] in download_url or (is_arm and 'arm' in download_url))):
                         info['url'] = download_url
                         break
             elif is_arm64:
@@ -163,6 +163,7 @@ class AutoUpdate(plugins.Plugin):
         self.ready = False
         self.status = StatusFile('/root/.auto-update')
         self.lock = Lock()
+        self.options = dict()
 
     def on_loaded(self):
         if 'interval' not in self.options or ('interval' in self.options and not self.options['interval']):

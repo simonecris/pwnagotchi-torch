@@ -64,6 +64,7 @@ class UPSLite(plugins.Plugin):
 
     def __init__(self):
         self.ups = None
+        self.options = dict()
 
     def on_loaded(self):
         self.ups = UPS()

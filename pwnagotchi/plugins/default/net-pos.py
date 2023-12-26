@@ -24,6 +24,7 @@ class NetPos(plugins.Plugin):
         self.skip = list()
         self.ready = False
         self.lock = threading.Lock()
+        self.options = dict()
 
     def on_loaded(self):
         if 'api_key' not in self.options or ('api_key' in self.options and not self.options['api_key']):

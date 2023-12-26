@@ -109,6 +109,7 @@ class Wigle(plugins.Plugin):
         self.report = StatusFile('/root/.wigle_uploads', data_format='json')
         self.skip = list()
         self.lock = Lock()
+        self.options = dict()
 
     def on_loaded(self):
         if 'api_key' not in self.options or ('api_key' in self.options and self.options['api_key'] is None):

@@ -1,4 +1,4 @@
-PACKER_VERSION := 1.9.4
+PACKER_VERSION := 1.10.0
 PWN_HOSTNAME := pwnagotchi
 PWN_VERSION := $(shell cut -d"'" -f2 < pwnagotchi/_version.py)
 
