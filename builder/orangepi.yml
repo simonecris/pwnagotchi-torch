@@ -183,17 +183,6 @@
         state: present
       when: hostname.changed
 
-    - name: edit bthelper override
-      copy:
-        dest: /etc/systemd/system/bthelper@.service.d/override.conf
-        content: |
-          [Unit]
-          After=hciuart.service bluetooth.service
-          Before=
-
-          [Service]
-          ExecStartPre=/bin/sleep 5
-
     - name: disable sap plugin for bluetooth.service
       lineinfile:
         dest: /lib/systemd/system/bluetooth.service
