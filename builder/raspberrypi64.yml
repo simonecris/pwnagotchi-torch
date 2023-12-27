@@ -129,7 +129,6 @@
           - libusb-1.0-0-dev
           - lsof
           - make
-          - pulseaudio-module-bluetooth
           - python3-dbus
           - python3-flask
           - python3-flask-cors
