@@ -135,8 +135,6 @@ def restart(mode):
     else:
         os.system("touch /root/.pwnagotchi-manual")
 
-    os.system("service bettercap restart")
-    time.sleep(2)
     os.system("service pwnagotchi restart")
 
 
