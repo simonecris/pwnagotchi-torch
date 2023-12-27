@@ -62,6 +62,7 @@
     services:
       enable:
         - bettercap.service
+        - bluetooth.service
         - dphys-swapfile.service
         - fstrim.timer
         - pwnagotchi.service
@@ -71,7 +72,6 @@
         - apt-daily-upgrade.timer
         - apt-daily.service
         - apt-daily.timer
-        - bluetooth.service
         - ifup@wlan0.service
         - triggerhappy.service
         - wpa_supplicant.service
@@ -177,6 +177,7 @@
           - libusb-1.0-0-dev
           - lsof
           - make
+          - pulseaudio-module-bluetooth
           - python3-flask
           - python3-flask-cors
           - python3-flaskext.wtf
