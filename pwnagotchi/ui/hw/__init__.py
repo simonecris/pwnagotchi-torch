@@ -23,11 +23,11 @@ from pwnagotchi.ui.hw.displayhatmini import DisplayHatMini
 # from pwnagotchi.ui.hw.waveshare1in02 import Waveshare102
 from pwnagotchi.ui.hw.waveshare1in54 import Waveshare154
 from pwnagotchi.ui.hw.waveshare1in54_V2 import Waveshare154V2
-# from pwnagotchi.ui.hw.waveshare1in54b_V2 import Waveshare154bV2
+from pwnagotchi.ui.hw.waveshare1in54b_V2 import Waveshare154bV2
 # from pwnagotchi.ui.hw.waveshare1in54c import Waveshare154c
 # from pwnagotchi.ui.hw.waveshare1in64g import Waveshare164g
-# from pwnagotchi.ui.hw.waveshare2in7b import Waveshare27inchb
-# from pwnagotchi.ui.hw.waveshare2in7b_V2 import Waveshare27bV2
+from pwnagotchi.ui.hw.waveshare2in7b import Waveshare27b
+from pwnagotchi.ui.hw.waveshare2in7b_V2 import Waveshare27bV2
 from pwnagotchi.ui.hw.waveshare2in9b_V3 import Waveshare29bV3
 from pwnagotchi.ui.hw.waveshare2in9b_V4 import Waveshare29bV4
 # from pwnagotchi.ui.hw.waveshare2in9bc import Waveshare29bc
@@ -86,16 +86,16 @@ def display_for(config):
         return
 
     elif config['ui']['display']['type'] == 'waveshare1in54':
-        return
+        return Waveshare154(config)
 
     elif config['ui']['display']['type'] == 'waveshare1in54_v2':
-        return
+        return Waveshare154V2(config)
 
     elif config['ui']['display']['type'] == 'waveshare1in54b':
         return Waveshare154inchb(config)
 
     elif config['ui']['display']['type'] == 'waveshare1in54b_v2':
-        return
+        return Waveshare154bV2(config)
 
     elif config['ui']['display']['type'] == 'waveshare1in54c':
         return
@@ -104,16 +104,16 @@ def display_for(config):
         return
 
     elif config['ui']['display']['type'] == 'waveshare2in7b':
-        return
+        return Waveshare27b(config)
 
     elif config['ui']['display']['type'] == 'waveshare2in7b_v2':
-        return
+        return Waveshare27bV2(config)
 
     elif config['ui']['display']['type'] == 'waveshare2in9b_v3':
-        return
+        return Waveshare29bV3(config)
 
     elif config['ui']['display']['type'] == 'waveshare2in9b_v4':
-        return
+        return Waveshare29bV4(config)
 
     elif config['ui']['display']['type'] == 'waveshare2in9bc':
         return

@@ -306,7 +306,7 @@ class FixServices(plugins.Plugin):
                         # success! now make the mon0
                         try:
                             cmd_output = subprocess.check_output("monstart", shell=True)
-                            self.logPrintView("info", "[Fix_Services interface add wlan0mon] worked #%s: %s"
+                            self.logPrintView("info", "[Fix_Services interface add wlan0mon worked #%s: %s"
                                               % (tries, cmd_output))
                             self._status = "up"
                             time.sleep(tries + 5)
@@ -314,7 +314,7 @@ class FixServices(plugins.Plugin):
                                 # try accessing mon0 in bettercap
                                 result = connection.run("set wifi.interface wlan0mon")
                                 if "success" in result:
-                                    logging.info("[Fix_Services set wifi.interface wlan0mon] worked!")
+                                    logging.info("[Fix_Services set wifi.interface wlan0mon worked!")
                                     self._status = ""
                                     self._count = self._count + 1
                                     time.sleep(1)
