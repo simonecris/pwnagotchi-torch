@@ -263,11 +263,20 @@ def load_config(args):
     elif config['ui']['display']['type'] in ('ws_27inchv2', 'waveshare2in7_v2', 'ws27inchv2', 'waveshare_27inchv2', 'waveshare27inchv2'):
         config['ui']['display']['type'] = 'waveshare2in7_v2'
 
+    elif config['ui']['display']['type'] in ('ws_27inchbv2', 'waveshare2in7b_v2', 'ws27inchbv2', 'waveshare_27inchbv2', 'waveshare27inchbv2'):
+        config['ui']['display']['type'] = 'waveshare2in7b_v2'
+
     elif config['ui']['display']['type'] in ('ws_29inch', 'waveshare2in9', 'ws29inch', 'waveshare_29inch', 'waveshare29inch'):
         config['ui']['display']['type'] = 'waveshare2in9'
 
     elif config['ui']['display']['type'] in ('ws_29inchv2', 'waveshare2in9_v2', 'ws29inchv2', 'waveshare_29inchv2', 'waveshare29inchv2'):
         config['ui']['display']['type'] = 'waveshare2in9_v2'
+
+    elif config['ui']['display']['type'] in ('ws_29inchbv3', 'waveshare2in9b_v3', 'ws29inchbv3', 'waveshare_29inchbv3', 'waveshare29inchbv3'):
+        config['ui']['display']['type'] = 'waveshare2in9b_v3'
+
+    elif config['ui']['display']['type'] in ('ws_29inchbv4', 'waveshare2in9b_v4', 'ws29inchbv4', 'waveshare_29inchbv4', 'waveshare29inchbv4'):
+        config['ui']['display']['type'] = 'waveshare2in9b_v4'
 
     elif config['ui']['display']['type'] in 'lcdhat':
         config['ui']['display']['type'] = 'lcdhat'
@@ -278,20 +287,29 @@ def load_config(args):
     elif config['ui']['display']['type'] in ('dfrobot_2', 'df2'):
         config['ui']['display']['type'] = 'dfrobot_2'
 
-    elif config['ui']['display']['type'] in ('ws_154inch', 'ws154inch', 'waveshare_154inch', 'waveshare154inch'):
-        config['ui']['display']['type'] = 'waveshare154inch'
+    elif config['ui']['display']['type'] in ('ws_154inch', 'waveshare1in54', 'ws154inch', 'waveshare_154inch', 'waveshare154inch'):
+        config['ui']['display']['type'] = 'waveshare1in54'
+
+    elif config['ui']['display']['type'] in ('ws_154inchb', 'waveshare1in54b', 'ws154inchb', 'waveshare_154inchb', 'waveshare154inchb'):
+        config['ui']['display']['type'] = 'waveshare1in54b'
+
+    elif config['ui']['display']['type'] in ('ws_154inchbv2', 'waveshare1in54bv2', 'ws154inchbv2', 'waveshare_154inchbv2', 'waveshare154inchbv2'):
+        config['ui']['display']['type'] = 'waveshare1in54b_v2'
+
+    elif config['ui']['display']['type'] in ('ws_154inchv2', 'waveshare1in54v2', 'ws154inchv2', 'waveshare_154inchv2', 'waveshare154inchv2'):
+        config['ui']['display']['type'] = 'waveshare1in54_v2'
 
     elif config['ui']['display']['type'] in ('waveshare144lcd', 'ws_144inch', 'ws144inch', 'waveshare_144inch', 'waveshare144inch'):
         config['ui']['display']['type'] = 'waveshare144lcd'
 
-    elif config['ui']['display']['type'] in ('ws_213d', 'ws213d', 'waveshare_213d', 'waveshare213d'):
-        config['ui']['display']['type'] = 'waveshare213d'
+    elif config['ui']['display']['type'] in ('ws_213d', 'ws213d', 'waveshare2in13d', 'waveshare_213d', 'waveshare213d'):
+        config['ui']['display']['type'] = 'waveshare2in13d'
 
-    elif config['ui']['display']['type'] in ('ws_213bc', 'ws213bc', 'waveshare_213bc', 'waveshare213bc'):
-        config['ui']['display']['type'] = 'waveshare213bc'
+    elif config['ui']['display']['type'] in ('ws_213bc', 'ws213bc', 'waveshare2in13bc', 'waveshare_213bc', 'waveshare213bc'):
+        config['ui']['display']['type'] = 'waveshare2in13bc'
     
-    elif config['ui']['display']['type'] in ('ws_213bv4', 'ws213bv4', 'waveshare_213bv4', 'waveshare213inb_v4'):
-        config['ui']['display']['type'] = 'waveshare213inb_v4'
+    elif config['ui']['display']['type'] in ('ws_213bv4', 'waveshare2in13b_v4', 'ws213bv4', 'waveshare_213bv4', 'waveshare213inb_v4'):
+        config['ui']['display']['type'] = 'waveshare2in13b_v4'
 
     elif config['ui']['display']['type'] in 'spotpear24inch':
         config['ui']['display']['type'] = 'spotpear24inch'
@@ -301,6 +319,105 @@ def load_config(args):
 
     elif config['ui']['display']['type'] in 'waveshare35lcd':
         config['ui']['display']['type'] = 'waveshare35lcd'
+        
+    elif config['ui']['display']['type'] in 'waveshare1in54c':
+        config['ui']['display']['type'] = 'waveshare1in54c'
+
+    elif config['ui']['display']['type'] in 'waveshare1in64g':
+        config['ui']['display']['type'] = 'waveshare1in64g'
+
+    elif config['ui']['display']['type'] in 'waveshare1in02':
+        config['ui']['display']['type'] = 'waveshare1in02'
+
+    elif config['ui']['display']['type'] in 'waveshare2in9bc':
+        config['ui']['display']['type'] = 'waveshare2in9bc'
+
+    elif config['ui']['display']['type'] in 'waveshare2in9d':
+        config['ui']['display']['type'] = 'waveshare2in9d'
+
+    elif config['ui']['display']['type'] in 'waveshare2in13b_v3':
+        config['ui']['display']['type'] = 'waveshare2in13b_v3'
+
+    elif config['ui']['display']['type'] in 'waveshare2in23g':
+        config['ui']['display']['type'] = 'waveshare2in23g'
+
+    elif config['ui']['display']['type'] in 'waveshare2in36g':
+        config['ui']['display']['type'] = 'waveshare2in36g'
+
+    elif config['ui']['display']['type'] in 'waveshare2in66':
+        config['ui']['display']['type'] = 'waveshare2in66'
+
+    elif config['ui']['display']['type'] in 'waveshare3in0g':
+        config['ui']['display']['type'] = 'waveshare3in0g'
+
+    elif config['ui']['display']['type'] in 'waveshare3in7':
+        config['ui']['display']['type'] = 'waveshare3in7'
+
+    elif config['ui']['display']['type'] in 'waveshare3in52':
+        config['ui']['display']['type'] = 'waveshare3in52'
+
+    elif config['ui']['display']['type'] in 'waveshare4in01f':
+        config['ui']['display']['type'] = 'waveshare4in01f'
+
+    elif config['ui']['display']['type'] in 'waveshare4in2':
+        config['ui']['display']['type'] = 'waveshare4in2'
+
+    elif config['ui']['display']['type'] in 'waveshare4in2_v2':
+        config['ui']['display']['type'] = 'waveshare4in2_v2'
+
+    elif config['ui']['display']['type'] in 'waveshare4in2b_v2':
+        config['ui']['display']['type'] = 'waveshare4in2b_v2'
+
+    elif config['ui']['display']['type'] in 'waveshare4in2bc':
+        config['ui']['display']['type'] = 'waveshare4in2bc'
+
+    elif config['ui']['display']['type'] in 'waveshare4in26':
+        config['ui']['display']['type'] = 'waveshare4in26'
+
+    elif config['ui']['display']['type'] in 'waveshare4in37g':
+        config['ui']['display']['type'] = 'waveshare4in37g'
+
+    elif config['ui']['display']['type'] in 'waveshare5in65f':
+        config['ui']['display']['type'] = 'waveshare5in65f'
+
+    elif config['ui']['display']['type'] in 'waveshare5in83':
+        config['ui']['display']['type'] = 'waveshare5in83'
+
+    elif config['ui']['display']['type'] in 'waveshare5in83_v2':
+        config['ui']['display']['type'] = 'waveshare5in83_v2'
+
+    elif config['ui']['display']['type'] in 'waveshare5in83b_v2':
+        config['ui']['display']['type'] = 'waveshare5in83b_v2'
+
+    elif config['ui']['display']['type'] in 'waveshare5in83bc':
+        config['ui']['display']['type'] = 'waveshare5in83bc'
+
+    elif config['ui']['display']['type'] in 'waveshare7in3f':
+        config['ui']['display']['type'] = 'waveshare7in3f'
+
+    elif config['ui']['display']['type'] in 'waveshare7in3g':
+        config['ui']['display']['type'] = 'waveshare7in3g'
+
+    elif config['ui']['display']['type'] in 'waveshare7in5':
+        config['ui']['display']['type'] = 'waveshare7in5'
+
+    elif config['ui']['display']['type'] in 'waveshare7in5_HD':
+        config['ui']['display']['type'] = 'waveshare7in5_HD'
+
+    elif config['ui']['display']['type'] in 'waveshare7in5_v2':
+        config['ui']['display']['type'] = 'waveshare7in5_v2'
+
+    elif config['ui']['display']['type'] in 'waveshare7in5b_HD':
+        config['ui']['display']['type'] = 'waveshare7in5b_HD'
+
+    elif config['ui']['display']['type'] in 'waveshare7in5b_v2':
+        config['ui']['display']['type'] = 'waveshare7in5b_v2'
+
+    elif config['ui']['display']['type'] in 'waveshare7in5bc':
+        config['ui']['display']['type'] = 'waveshare7in5bc'
+
+    elif config['ui']['display']['type'] in 'waveshare13in3k':
+        config['ui']['display']['type'] = 'waveshare13in3k'
 
     else:
         print("unsupported display type %s" % config['ui']['display']['type'])
@@ -388,7 +505,7 @@ def extract_from_pcap(path, fields):
         subtypes = set()
 
         if field == WifiInfo.BSSID:
-            from scapy.all import Dot11Beacon, Dot11ProbeResp, Dot11AssoReq, Dot11ReassoReq, Dot11, sniff
+            from scapy.layers.dot11 import Dot11Beacon, Dot11ProbeResp, Dot11AssoReq, Dot11ReassoReq, Dot11, sniff
             subtypes.add('beacon')
             bpf_filter = " or ".join([f"wlan type mgt subtype {subtype}" for subtype in subtypes])
             packets = sniff(offline=path, filter=bpf_filter)
@@ -403,7 +520,7 @@ def extract_from_pcap(path, fields):
             except Exception:
                 raise FieldNotFoundError("Could not find field [BSSID]")
         elif field == WifiInfo.ESSID:
-            from scapy.all import Dot11Beacon, Dot11ReassoReq, Dot11AssoReq, Dot11, sniff, Dot11Elt
+            from scapy.layers.dot11 import Dot11Beacon, Dot11ReassoReq, Dot11AssoReq, Dot11, sniff, Dot11Elt
             subtypes.add('beacon')
             subtypes.add('assoc-req')
             subtypes.add('reassoc-req')
@@ -419,7 +536,7 @@ def extract_from_pcap(path, fields):
             except Exception:
                 raise FieldNotFoundError("Could not find field [ESSID]")
         elif field == WifiInfo.ENCRYPTION:
-            from scapy.all import Dot11Beacon, sniff
+            from scapy.layers.dot11 import Dot11Beacon, sniff
             subtypes.add('beacon')
             bpf_filter = " or ".join([f"wlan type mgt subtype {subtype}" for subtype in subtypes])
             packets = sniff(offline=path, filter=bpf_filter)
@@ -435,7 +552,7 @@ def extract_from_pcap(path, fields):
             except Exception:
                 raise FieldNotFoundError("Could not find field [ENCRYPTION]")
         elif field == WifiInfo.CHANNEL:
-            from scapy.all import sniff, RadioTap
+            from scapy.layers.dot11 import sniff, RadioTap
             from pwnagotchi.mesh.wifi import freq_to_channel
             packets = sniff(offline=path, count=1)
             try:
@@ -443,7 +560,7 @@ def extract_from_pcap(path, fields):
             except Exception:
                 raise FieldNotFoundError("Could not find field [CHANNEL]")
         elif field == WifiInfo.RSSI:
-            from scapy.all import sniff, RadioTap
+            from scapy.layers.dot11 import sniff, RadioTap
             from pwnagotchi.mesh.wifi import freq_to_channel
             packets = sniff(offline=path, count=1)
             try:
