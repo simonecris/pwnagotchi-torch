@@ -82,9 +82,6 @@ def display_for(config):
     elif config['ui']['display']['type'] == 'dfrobot_2':
         return DFRobotV2(config)
 
-    elif config['ui']['display']['type'] == 'waveshare1in02':
-        return
-
     elif config['ui']['display']['type'] == 'waveshare1in54':
         return Waveshare154(config)
 
@@ -97,12 +94,6 @@ def display_for(config):
     elif config['ui']['display']['type'] == 'waveshare1in54b_v2':
         return Waveshare154bV2(config)
 
-    elif config['ui']['display']['type'] == 'waveshare1in54c':
-        return
-
-    elif config['ui']['display']['type'] == 'waveshare1in64g':
-        return
-
     elif config['ui']['display']['type'] == 'waveshare2in7b':
         return Waveshare27b(config)
 
@@ -114,6 +105,63 @@ def display_for(config):
 
     elif config['ui']['display']['type'] == 'waveshare2in9b_v4':
         return Waveshare29bV4(config)
+
+    elif config['ui']['display']['type'] == 'waveshare_1':
+        return WaveshareV1(config)
+
+    elif config['ui']['display']['type'] == 'waveshare_2':
+        return WaveshareV2(config)
+
+    elif config['ui']['display']['type'] == 'waveshare_3':
+        return WaveshareV3(config)
+
+    elif config['ui']['display']['type'] == 'waveshare_4':
+        return WaveshareV4(config)
+
+    elif config['ui']['display']['type'] == 'waveshare2in7':
+        return Waveshare27inch(config)
+
+    elif config['ui']['display']['type'] == 'waveshare2in7_v2':
+        return Waveshare27inchV2(config)
+
+    elif config['ui']['display']['type'] == 'waveshare2in9':
+        return Waveshare29inch(config)
+
+    elif config['ui']['display']['type'] == 'waveshare2in9_v2':
+        return Waveshare29inchV2(config)
+
+    elif config['ui']['display']['type'] == 'waveshare144lcd':
+        return Waveshare144lcd(config)
+
+    elif config['ui']['display']['type'] == 'waveshare1in54b':
+        return Waveshare154inchb(config)
+
+    elif config['ui']['display']['type'] == 'waveshare2in13bc':
+        return Waveshare213bc(config)
+
+    elif config['ui']['display']['type'] == 'waveshare2in13d':
+        return Waveshare213d(config)
+
+    elif config['ui']['display']['type'] == 'waveshare2in13b_v4':
+        return Waveshare213bV4(config)
+
+    elif config['ui']['display']['type'] == 'waveshare35lcd':
+        return Waveshare35lcd(config)
+
+    elif config['ui']['display']['type'] == 'spotpear24inch':
+        return Spotpear24inch(config)
+
+    elif config['ui']['display']['type'] == 'displayhatmini':
+        return DisplayHatMini(config)
+
+    elif config['ui']['display']['type'] == 'waveshare1in54c':
+        return
+
+    elif config['ui']['display']['type'] == 'waveshare1in64g':
+        return
+
+    elif config['ui']['display']['type'] == 'waveshare1in02':
+        return
 
     elif config['ui']['display']['type'] == 'waveshare2in9bc':
         return
@@ -204,51 +252,3 @@ def display_for(config):
 
     elif config['ui']['display']['type'] == 'waveshare13in3k':
         return
-
-    elif config['ui']['display']['type'] == 'waveshare_1':
-        return WaveshareV1(config)
-
-    elif config['ui']['display']['type'] == 'waveshare_2':
-        return WaveshareV2(config)
-
-    elif config['ui']['display']['type'] == 'waveshare_3':
-        return WaveshareV3(config)
-
-    elif config['ui']['display']['type'] == 'waveshare_4':
-        return WaveshareV4(config)
-
-    elif config['ui']['display']['type'] == 'waveshare2in7':
-        return Waveshare27inch(config)
-
-    elif config['ui']['display']['type'] == 'waveshare2in7_v2':
-        return Waveshare27inchV2(config)
-
-    elif config['ui']['display']['type'] == 'waveshare2in9':
-        return Waveshare29inch(config)
-
-    elif config['ui']['display']['type'] == 'waveshare2in9_v2':
-        return Waveshare29inchV2(config)
-
-    elif config['ui']['display']['type'] == 'waveshare144lcd':
-        return Waveshare144lcd(config)
-
-    elif config['ui']['display']['type'] == 'waveshare1in54b':
-        return Waveshare154inchb(config)
-
-    elif config['ui']['display']['type'] == 'waveshare2in13bc':
-        return Waveshare213bc(config)
-
-    elif config['ui']['display']['type'] == 'waveshare2in13d':
-        return Waveshare213d(config)
-
-    elif config['ui']['display']['type'] == 'waveshare2in13b_v4':
-        return Waveshare213bV4(config)
-
-    elif config['ui']['display']['type'] == 'waveshare35lcd':
-        return Waveshare35lcd(config)
-
-    elif config['ui']['display']['type'] == 'spotpear24inch':
-        return Spotpear24inch(config)
-
-    elif config['ui']['display']['type'] == 'displayhatmini':
-        return DisplayHatMini(config)
