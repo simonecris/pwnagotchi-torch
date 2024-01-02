@@ -257,14 +257,17 @@ def load_config(args):
     elif config['ui']['display']['type'] in ('ws_4', 'ws4', 'waveshare_4', 'waveshare4'):
         config['ui']['display']['type'] = 'waveshare_4'
 
-    elif config['ui']['display']['type'] in ('ws_27inch', 'ws27inch', 'waveshare_27inch', 'waveshare27inch'):
+    elif config['ui']['display']['type'] in ('ws_27inch', 'ws27inch', 'waveshare2in7', 'waveshare_27inch', 'waveshare27inch'):
         config['ui']['display']['type'] = 'waveshare27inch'
 
-    elif config['ui']['display']['type'] in ('ws_27inchv2', 'ws27inchv2', 'waveshare_27inchv2', 'waveshare27inchv2'):
+    elif config['ui']['display']['type'] in ('ws_27inchv2', 'waveshare2in7_v2', 'ws27inchv2', 'waveshare_27inchv2', 'waveshare27inchv2'):
         config['ui']['display']['type'] = 'waveshare2in7_v2'
 
-    elif config['ui']['display']['type'] in ('ws_29inch', 'ws29inch', 'waveshare_29inch', 'waveshare29inch'):
+    elif config['ui']['display']['type'] in ('ws_29inch', 'waveshare2in9', 'ws29inch', 'waveshare_29inch', 'waveshare29inch'):
         config['ui']['display']['type'] = 'waveshare2in9'
+
+    elif config['ui']['display']['type'] in ('ws_29inchv2', 'waveshare2in9_v2', 'ws29inchv2', 'waveshare_29inchv2', 'waveshare29inchv2'):
+        config['ui']['display']['type'] = 'waveshare2in9_v2'
 
     elif config['ui']['display']['type'] in 'lcdhat':
         config['ui']['display']['type'] = 'lcdhat'
