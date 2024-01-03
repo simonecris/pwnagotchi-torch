@@ -334,7 +334,7 @@ class EPD:
         self.send_command(0x24)
         for j in range(Height):
             for i in range(Width):
-                self.send_data(0XFF)
+                self.send_data(0xFF)
         self.TurnOnDisplay()
 
     def display(self, image):
