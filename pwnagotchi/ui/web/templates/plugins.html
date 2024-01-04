@@ -60,7 +60,6 @@ $(function(){
 <div id="container">
     {% for name in database.keys() | sort %}
         {% set has_info = name in loaded and loaded[name].__description__ is defined %}
-        {% loaded[name].__version__ %}
         <div class="plugins-box">
           <div class="tooltip">
             <h4>
