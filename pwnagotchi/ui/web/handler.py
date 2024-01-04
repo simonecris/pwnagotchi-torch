@@ -191,7 +191,7 @@ class Handler:
         if name == 'upgrade' and request.method == 'POST':
             logging.info(f"Upgrading plugin: {request.form['plugin']}")
             os.system(f"pwnagotchi plugins update && pwnagotchi plugins upgrade {request.form['plugin']}")
-            return 'success' if redirect(flask.url_for('/plugins')) else 'failed'
+            return 'success'
 
         if name in plugins.loaded and plugins.loaded[name] is not None and hasattr(plugins.loaded[name], 'on_webhook'):
             try:
