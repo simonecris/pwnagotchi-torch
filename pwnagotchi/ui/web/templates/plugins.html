@@ -55,8 +55,8 @@ $(function(){
         });
     });
     $('input[type=button]').change(function(e) {
-          var checkbox = $(this);
-          var form = checkbox.closest('form');
+          var button = $(this);
+          var form = button.closest('form');
           var url = form.attr('action');
 
           $.ajax({
