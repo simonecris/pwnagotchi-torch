@@ -82,9 +82,6 @@ $(function(){
               <a {% if name in loaded and loaded[name].on_webhook is defined %} href="/plugins/{{name}}" {% endif %}>{{name}}</a>
             </h4>
             {% if has_info %}
-                {% if __version__ is defined %}
-                    <p>v{{ loaded[name].__version__ }}</p>
-                {% endif %}
               <span class="tooltiptext">{{ loaded[name].__description__ }}</span>
             {% else %}
               <span class="tooltiptext">Description can't be loaded yet.</span>
