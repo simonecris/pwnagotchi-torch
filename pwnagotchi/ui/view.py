@@ -21,7 +21,6 @@ BLACK = 0x00
 ROOT = None
 
 
-
 class View(object):
     def __init__(self, config, impl, state=None):
         global ROOT

@@ -1,5 +1,6 @@
 import logging
 import requests
+from requests import adapters
 import websockets
 import asyncio
 import random
