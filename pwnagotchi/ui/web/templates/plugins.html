@@ -54,10 +54,10 @@ $(function(){
             }
         });
     });
-    $('input[type=submit]') {
+    $('input[type=submit]').change(function(e) {
           var button = $(this);
           var form = button.closest('form');
-          var url = '/plugins'
+          var url = form.attr('action');
 
           $.ajax({
              type: 'POST',
