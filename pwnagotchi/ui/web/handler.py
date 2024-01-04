@@ -189,12 +189,9 @@ class Handler:
             return 'success' if plugins.toggle_plugin(request.form['plugin'], checked) else 'failed'
 
         if name == 'upgrade' and request.method == 'POST':
-            try:
-                logging.info(f"Upgrading plugin: {request.form['plugin']}")
-                os.system(f"pwnagotchi plugins update && pwnagotchi plugins upgrade {request.form['plugin']}")
-                return redirect(flask.url_for('/plugins'))
-            except:
-                return 'failed'
+            logging.info(f"Upgrading plugin: {request.form['plugin']}")
+            os.system(f"pwnagotchi plugins update && pwnagotchi plugins upgrade {request.form['plugin']}")
+            return 'success' if redirect(flask.url_for('/plugins')) else 'failed'
 
         if name in plugins.loaded and plugins.loaded[name] is not None and hasattr(plugins.loaded[name], 'on_webhook'):
             try:
