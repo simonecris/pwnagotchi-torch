@@ -57,7 +57,7 @@ $(function(){
     $('input[type=submit]').change(function(e) {
           var button = $(this);
           var form = button.closest('form');
-          var url = form.attr('action');
+          var url = '/plugins'
 
           $.ajax({
              type: 'POST',
