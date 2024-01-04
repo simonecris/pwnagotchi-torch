@@ -54,7 +54,7 @@ $(function(){
             }
         });
     });
-    $('input[type=button]') {
+    $('input[type=submit]') {
           var button = $(this);
           var form = button.closest('form');
           var url = form.attr('action');
@@ -93,7 +93,7 @@ $(function(){
             <input type="hidden" name="plugin" value="{{ name }}"/>
           </form>
           <form method="POST" action="/plugins/upgrade">
-              <input type="button" name="upgrade" value="Upgrade">
+              <input type="submit" name="upgrade" value="Upgrade">
               <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
               <input type="hidden" name="plugin" value="{{ name }}"/>
           </form>
