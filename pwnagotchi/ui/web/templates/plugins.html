@@ -54,6 +54,22 @@ $(function(){
             }
         });
     });
+    $('input[type=button]').change(function(e) {
+          var checkbox = $(this);
+          var form = checkbox.closest('form');
+          var url = form.attr('action');
+
+          $.ajax({
+             type: 'POST',
+             url: url,
+             data: form.serialize(),
+             success: function(data) {
+                  if( data.indexOf('failed') != -1 ) {
+                      alert('Could not be upgraded.');
+                  }
+            }
+        });
+    });
 });
 {% endblock %}
 {% block content %}
