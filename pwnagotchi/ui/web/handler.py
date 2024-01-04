@@ -189,6 +189,7 @@ class Handler:
             return 'success' if plugins.toggle_plugin(request.form['plugin'], checked) else 'failed'
 
         if name == 'upgrade' and request.method == 'POST':
+            logging.info(f"Upgrading {request.form['plugin']}")
             os.system(f"pwnagotchi plugins update && pwnagotchi plugins upgrade {request.form['plugin']}")
             return redirect(flask.url_for('/plugins'))
 
