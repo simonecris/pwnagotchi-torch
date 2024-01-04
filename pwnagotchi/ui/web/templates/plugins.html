@@ -59,6 +59,7 @@ $(function(){
 {% block content %}
 <div id="container">
     {% for name in database.keys() | sort %}
+        {% loaded[name].__version__ %}
         {% set has_info = name in loaded and loaded[name].__description__ is defined %}
         <div class="plugins-box">
           <div class="tooltip">
@@ -73,6 +74,7 @@ $(function(){
           </div>
           <form method="POST" action="/plugins/toggle">
             <input type="checkbox" data-role="flipswitch" name="enabled" id="flip-checkbox-{{name}}" data-on-text="Enabled" data-off-text="Disabled" data-wrapper-class="custom-size-flipswitch" {% if name in loaded %} checked {% endif %}>
+            <input type="button" name="upgrade">
             <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
             <input type="hidden" name="plugin" value="{{ name }}"/>
           </form>
