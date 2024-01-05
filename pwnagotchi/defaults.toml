@@ -126,7 +126,7 @@ main.log.path = "/var/log/pwnagotchi.log"
 main.log.rotation.enabled = true
 main.log.rotation.size = "10M"
 
-ai.enabled = false
+ai.enabled = true
 ai.path = "/root/brain.nn"
 ai.laziness = 0.1
 ai.epochs_per_episode = 50
@@ -189,8 +189,6 @@ ui.faces.debug = "(#__#)"
 ui.faces.upload = "(1__0)"
 ui.faces.upload1 = "(1__1)"
 ui.faces.upload2 = "(0__1)"
-
-ui.invert = false
 
 ui.web.enabled = true
 ui.web.address = "::" # listening on both ipv4 and ipv6 - switch to 0.0.0.0 to listen on just ipv4
