@@ -284,7 +284,7 @@ class FixServices(plugins.Plugin):
             #
             # Future: while "not fixed yet": blah blah blah. if "max_attemts", then reboot like the old days
             #
-            tries = 0
+            tries = 1
             while tries < 3:
                 try:
                     # unload the module
@@ -292,7 +292,6 @@ class FixServices(plugins.Plugin):
                     self.logPrintView("info", "[Fix_Services] unloaded brcmfmac", display,
                                       {"status": "Turning it off #%s" % tries, "face": faces.SMART})
                     self._status = "ul"
-                    time.sleep(1 + tries)
 
                     # reload the module
                     try:
@@ -301,7 +300,6 @@ class FixServices(plugins.Plugin):
 
                         self.logPrintView("info", "[Fix_Services] reloaded brcmfmac")
                         self._status = "rl"
-                        time.sleep(10 + 4 * tries)  # give it some time for wlan device to stabilize, or whatever
 
                         # success! now make the mon0
                         try:
@@ -309,7 +307,6 @@ class FixServices(plugins.Plugin):
                             self.logPrintView("info", "[Fix_Services interface add wlan0mon worked #%s: %s"
                                               % (tries, cmd_output))
                             self._status = "up"
-                            time.sleep(tries + 5)
                             try:
                                 # try accessing mon0 in bettercap
                                 result = connection.run("set wifi.interface wlan0mon")
@@ -317,7 +314,6 @@ class FixServices(plugins.Plugin):
                                     logging.info("[Fix_Services set wifi.interface wlan0mon worked!")
                                     self._status = ""
                                     self._count = self._count + 1
-                                    time.sleep(1)
                                     # stop looping and get back to recon
                                     break
                                 else:
