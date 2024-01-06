@@ -25,12 +25,6 @@ class FixServices(plugins.Plugin):
     __help__ = """
     Reload brcmfmac module when blindbug is detected, instead of rebooting. Adapted from WATCHDOG.
     """
-    __dependencies__ = {
-        'pip': ['scapy']
-    }
-    __defaults__ = {
-        'enabled': True,
-    }
 
     def __init__(self):
         self.options = dict()

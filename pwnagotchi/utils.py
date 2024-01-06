@@ -471,13 +471,13 @@ class StatusFile(object):
             return self.data[name]
         return default
 
-    def newer_then_minutes(self, minutes):
+    def newer_than_minutes(self, minutes):
         return self._updated is not None and ((datetime.now() - self._updated).seconds / 60) < minutes
 
-    def newer_then_hours(self, hours):
+    def newer_than_hours(self, hours):
         return self._updated is not None and ((datetime.now() - self._updated).seconds / (60 * 60)) < hours
 
-    def newer_then_days(self, days):
+    def newer_than_days(self, days):
         return self._updated is not None and (datetime.now() - self._updated).days < days
 
     def update(self, data=None):

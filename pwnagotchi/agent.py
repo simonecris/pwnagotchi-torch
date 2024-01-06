@@ -190,7 +190,7 @@ class Agent(Client, Automata, AsyncAdvertiser, AsyncTrainer):
                     if self._filter_included(ap):
                         aps.append(ap)
         except Exception as e:
-            logging.exception("Error while getting acces points (%s)", e)
+            logging.exception("Error while getting access points (%s)", e)
 
         aps.sort(key=lambda ap: ap['channel'])
         return self.set_access_points(aps)

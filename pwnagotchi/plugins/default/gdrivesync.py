@@ -179,7 +179,7 @@ class GdriveSync(plugins.Plugin):
         if self.lock.locked():
             return
         with self.lock:
-            if self.status.newer_then_hours(self.options['interval']):
+            if self.status.newer_than_hours(self.options['interval']):
                 logging.debug("[update] last check happened less than %d hours ago" % self.options['interval'])
                 return
 
