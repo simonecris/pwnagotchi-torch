@@ -515,7 +515,6 @@ class BTTether(plugins.Plugin):
                 else:
                     logging.debug('BT-TETHER: Already paired.')
 
-
                 logging.debug('BT-TETHER: Try to create nap connection with %s ...', device.name)
                 device.network, success = BTNap.nap(dev_remote)
                 interface = None
