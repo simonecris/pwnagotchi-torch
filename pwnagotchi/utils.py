@@ -165,19 +165,23 @@ def load_config(args):
     ref_defaults_data = None
 
     # check for a config.yml file on /boot/
-    for boot_conf in ['/boot/config.yml', '/boot/config.toml']:
+        for boot_conf in ['/boot/config.yml', '/boot/firmware/config.yml',
+                      '/boot/config.toml', '/boot/firmware/config.toml']:
         if os.path.exists(boot_conf):
+            if os.path.exists(args.user_config):
+                # if /etc/pwnagotchi/config.toml already exists we just merge the new config
+                merge_config(boot_conf, args.user_config)
             # logging not configured here yet
-            print("installing %s to %s ...", boot_conf, args.user_config)
+            print("installing new %s to %s ...", boot_conf, args.user_config)
             # https://stackoverflow.com/questions/42392600/oserror-errno-18-invalid-cross-device-link
             shutil.move(boot_conf, args.user_config)
             break
 
     # check for an entire pwnagotchi folder on /boot/
-    if os.path.isdir('/boot/pwnagotchi'):
-        print("installing /boot/pwnagotchi to /etc/pwnagotchi ...")
+    if os.path.isdir('/boot/firmware/pwnagotchi'):
+        print("installing /boot/firmware/pwnagotchi to /etc/pwnagotchi ...")
         shutil.rmtree('/etc/pwnagotchi', ignore_errors=True)
-        shutil.move('/boot/pwnagotchi', '/etc/')
+        shutil.move('/boot/firmware/pwnagotchi', '/etc/')
 
     # if not config is found, copy the defaults
     if not os.path.exists(args.config):
