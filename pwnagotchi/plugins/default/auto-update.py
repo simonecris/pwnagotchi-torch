@@ -196,8 +196,10 @@ class AutoUpdate(plugins.Plugin):
 
                 to_install = []
                 to_check = [
-                    ('jayofelony/bettercap', parse_version('bettercap -version'), True, 'bettercap'),
-                    ('jayofelony/pwngrid', parse_version('pwngrid -version'), True, 'pwngrid-peer'),
+                    # removing bettercap and pwngrid from auto-update as compiling new versions uses a newer libc6,
+                    # which is not compatible with bullseye RaspiOS.
+                    # ('jayofelony/bettercap', parse_version('bettercap -version'), True, 'bettercap'),
+                    # ('jayofelony/pwngrid', parse_version('pwngrid -version'), True, 'pwngrid-peer'),
                     ('jayofelony/pwnagotchi-torch', pwnagotchi.__version__, False, 'pwnagotchi')
                 ]
 
