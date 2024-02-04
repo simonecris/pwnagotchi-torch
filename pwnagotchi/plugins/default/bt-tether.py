@@ -482,7 +482,7 @@ class BTTether(plugins.Plugin):
                     continue
 
                 if not device.max_tries or (device.max_tries > device.tries):
-                    if not device.status.newer_then_minutes(device.interval):
+                    if not device.status.newer_than_minutes(device.interval):
                         devices_to_try.append(device)
                         device.status.update()
                         device.tries += 1
